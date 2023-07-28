@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+    font-family: Nunito, sans-serif;
+    padding-top: 72px;
+}
+
+@layer components {
+    @variants dark {
+        .hamburger-dots{
+          @apply bg-white
+        }
+      }
+   .intro-section {
+    @apply h-[50vh] lg:h-screen bg-gradient-to-t from-indigo-200 dark:from-slate-800 dark:to-slate-900 relative overflow-hidden;
+   }
+   .nav{
+    @apply w-full fixed top-0 bg-white z-10 dark:bg-slate-900;
+   }
+   .nav__container{
+    @apply container mx-auto py-5 flex items-center justify-between;
+   }
+   .nav__main-menu{
+    @apply hidden md:flex space-x-10 text-gray-600 dark:text-gray-100 font-bold text-sm uppercase
+   }
+   .nav__main-menu__link{
+    @apply hover:text-gray-500
+   }
+   .nav__theme{
+    @apply  md:block w-5 cursor-pointer
+   }
+   .nav__hamburger{
+    @apply space-y-1 md:hidden cursor-pointer z-20 px-2
+   }
+
+}
